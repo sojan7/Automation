@@ -13,8 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Verifications", "Automation
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{44A4672F-CFAD-4E40-AC59-0650ACCAD092}"
 	ProjectSection(SolutionItems) = preProject
-		chrome.runsettings = chrome.runsettings
-		firefox.runsettings = firefox.runsettings
+		Runsettings\chrome.runsettings = Runsettings\chrome.runsettings
+		Runsettings\firefox.runsettings = Runsettings\firefox.runsettings
 	EndProjectSection
 EndProject
 Global
