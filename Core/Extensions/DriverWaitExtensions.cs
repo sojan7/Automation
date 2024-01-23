@@ -64,14 +64,7 @@ namespace Core.Extensions
             {
                 PollingInterval = TimeSpan.FromSeconds(1)
             };
-            try
-            {
-                return wait.Until(ExpectedConditions.ElementIsVisible(by));
-            }
-            catch (ElementNotVisibleException exception)
-            {
-                throw exception;
-            }
+            return wait.Until(ExpectedConditions.ElementIsVisible(by));
         }
 
         public static IWebElement WaitForAnElementIsPresent(this IWebDriver driver, By by)
@@ -80,14 +73,7 @@ namespace Core.Extensions
             {
                 PollingInterval = TimeSpan.FromSeconds(1)
             };
-            try
-            {
-                return wait.Until(ExpectedConditions.ElementExists(by));
-            }
-            catch (ElementNotVisibleException exception)
-            {
-                throw exception;
-            }
+            return wait.Until(ExpectedConditions.ElementExists(by));
         }
 
         public static bool IsElementPresent(this IWebDriver driver, By by, TimeSpan waitTimeOut = default, TimeSpan pollingInterval = default)

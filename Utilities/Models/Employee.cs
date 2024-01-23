@@ -17,7 +17,9 @@
             return Id == otherEmployee.Id && Name == otherEmployee.Name && Age == otherEmployee.Age;
         }
 
-        //public override int GetHashCode()
-        //{ return 0; }
+        public override int GetHashCode()
+        {
+            return 0;
+        }
     }
 }

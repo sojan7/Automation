@@ -39,13 +39,6 @@ namespace Core.Extensions
             alert.Accept();
         }
 
-        public static void ConfirmAlert(this IWebDriver driver)
-        {
-            driver.WaitUntilAlertIsPresent();
-            var alert = driver.SwitchTo().Alert();
-            alert.Accept();
-        }
-
         public static void DismissAlert(this IWebDriver driver)
         {
             driver.WaitUntilAlertIsPresent();

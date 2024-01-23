@@ -65,7 +65,7 @@ namespace Verification.Tests.UI_Test
             "Book Store Application"
             };
             List<bool> allHomePageMenuVisibility = homePage.IsHomePageMenusVisible(expectedMenus);
-            Assert.IsTrue(allHomePageMenuVisibility.All(item => item), "All the expected menus are not present in the UI");
+            Assert.IsTrue(allHomePageMenuVisibility.TrueForAll(item => item), "All the expected menus are not present in the UI");
             log.Info("Verified that all expected menus are displayed in homepage");
         }
 
