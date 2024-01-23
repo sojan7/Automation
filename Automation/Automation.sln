@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Verifications", "Verifications.csproj", "{D305E09B-6EFA-4657-97E1-3C54FC520476}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI_Core", "..\Core\UI_Core.csproj", "{5D567CE1-F2E1-4FAC-832D-1D3894CA77C4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "..\Application\Application.csproj", "{52E8056F-C795-4B21-AC93-5667D73EA1CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI_Utilities", "..\Utilities\UI_Utilities.csproj", "{04BCC749-7572-403F-86E0-0E658D198C5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{F5602593-6182-4923-B977-B33BA9E2F84E}"
+	ProjectSection(SolutionItems) = preProject
+		chrome.runsettings = chrome.runsettings
+		firefox.runsettings = firefox.runsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D305E09B-6EFA-4657-97E1-3C54FC520476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D305E09B-6EFA-4657-97E1-3C54FC520476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D305E09B-6EFA-4657-97E1-3C54FC520476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D305E09B-6EFA-4657-97E1-3C54FC520476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D567CE1-F2E1-4FAC-832D-1D3894CA77C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D567CE1-F2E1-4FAC-832D-1D3894CA77C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D567CE1-F2E1-4FAC-832D-1D3894CA77C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D567CE1-F2E1-4FAC-832D-1D3894CA77C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E8056F-C795-4B21-AC93-5667D73EA1CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E8056F-C795-4B21-AC93-5667D73EA1CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E8056F-C795-4B21-AC93-5667D73EA1CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E8056F-C795-4B21-AC93-5667D73EA1CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BCC749-7572-403F-86E0-0E658D198C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BCC749-7572-403F-86E0-0E658D198C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BCC749-7572-403F-86E0-0E658D198C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BCC749-7572-403F-86E0-0E658D198C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBABBC04-9B08-4EBB-9E64-7A6E0728347F}
+	EndGlobalSection
+EndGlobal

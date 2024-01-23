@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- firefox.runsettings -->
+
+<RunSettings>
+	<TestRunParameters>
+		<Parameter name="Browser" value="firefox" />
+	</TestRunParameters>
+</RunSettings>
