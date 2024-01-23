@@ -11,15 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Verifications", "Automation\Verifications.csproj", "{9254020B-FCB9-4655-80E3-3BEE47AF21A1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{44A4672F-CFAD-4E40-AC59-0650ACCAD092}"
-	ProjectSection(SolutionItems) = preProject
-		Runsettings\chrome.runsettings = Runsettings\chrome.runsettings
-		Runsettings\firefox.runsettings = Runsettings\firefox.runsettings
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{388FC0E4-A91B-459B-802C-F4BAF49FBBD8}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		Runsettings\chrome.runsettings = Runsettings\chrome.runsettings
+		Runsettings\firefox.runsettings = Runsettings\firefox.runsettings
 	EndProjectSection
 EndProject
 Global
