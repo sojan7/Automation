@@ -8,11 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Tests\Screenshots\VerifyAllExpectedMenusArePresentInHomePage" />
+    <Compile Remove="Tests\Screenshots\**" />
+    <EmbeddedResource Remove="Tests\Screenshots\**" />
+    <None Remove="Tests\Screenshots\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="6.12.0" />
     <PackageReference Include="log4net" Version="2.0.15" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -29,7 +30,6 @@
 
   <ItemGroup>
     <Folder Include="Tests\Logs\" />
-    <Folder Include="Tests\Screenshots\" />
   </ItemGroup>
 
 </Project>

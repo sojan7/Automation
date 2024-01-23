@@ -21,7 +21,7 @@ namespace Verification.Tests.UI_Test
         private readonly UrlUtilities urlUtilities;
         private readonly HomePage homePage;
         private readonly ElementsPage elementsPage;
-        private ILog log;
+        private readonly ILog log;
 
         public ElementsPageTest()
         {
@@ -42,8 +42,6 @@ namespace Verification.Tests.UI_Test
         [TearDown]
         public void ElementsPageTestTearDown()
         {
-            var person = new { Name = "John", Age = 30, LastName = "SS" };
-
             driver!.CaptureScreenShotForFailedTests();
         }
 
@@ -67,7 +65,7 @@ namespace Verification.Tests.UI_Test
             "Book Store Application"
             };
             List<bool> allHomePageMenuVisibility = homePage.IsHomePageMenusVisible(expectedMenus);
-            Assert.IsTrue(allHomePageMenuVisibility.All(item => item == true), "All the expected menus are not present in the UI");
+            Assert.IsTrue(allHomePageMenuVisibility.All(item => item), "All the expected menus are not present in the UI");
             log.Info("Verified that all expected menus are displayed in homepage");
         }
 
@@ -169,18 +167,12 @@ namespace Verification.Tests.UI_Test
             log.Info("Verification of Navigation to back");
             homePage.ClickOnTheHomePageMenu("Elements");
             elementsPage.ClickOnElementsPageSideMenu("Text Box");
-            var elementsPageUrl = WebDriver.Url;
+            var elementsPageUrl = WebDriver!.Url;
             WebDriver.Navigate().Back();
             WebDriver.WaitForPageLoad();
             var homePageUrl = WebDriver.Url;
             Assert.AreNotEqual(elementsPageUrl, homePageUrl);
             log.Info("Verification of Navigation to back completed");
-        }
-
-        [Test, Order(8), Category("ElementsPageVerification"), Ignore("Ignoring just to test the attribute")]
-        public void Test2()
-        {
-            Console.WriteLine("This test is ignored");
         }
     }
 }

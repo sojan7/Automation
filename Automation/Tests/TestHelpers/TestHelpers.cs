@@ -14,5 +14,15 @@ namespace Verification.Tests.TestHelpers
                 driver!.CaptureScreenShot(filePath);
             }
         }
+
+        public static void DeleteAllExistingScreenShots()
+        {
+            var a = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory)!.Parent!.Parent!.Parent!.FullName, $"Tests\\Screenshots");
+            string[] files = Directory.GetFiles(a);
+            foreach (string file in files)
+            {
+                File.Delete(file);
+            }
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace Verification.Tests.UI_Test
         private readonly UrlUtilities urlUtilities;
         private readonly HomePage homePage;
         private readonly AlertFrameAndWindowPage alertFrameAndWindowPage;
-        private ILog log;
+        private readonly ILog log;
 
         public AlertAndFramesTest()
         {
