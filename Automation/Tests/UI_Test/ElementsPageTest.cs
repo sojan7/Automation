@@ -55,15 +55,15 @@ namespace Verification.Tests.UI_Test
         public void VerifyAllExpectedMenusArePresentInHomePage()
         {
             log.Info("Verification that all expected menus are displayed in homepage");
-            List<string> expectedMenus = new()
-            {
-            "Elements",
-            "Forms",
-            "Alerts, Frame & Windows",
-            "Widgets",
-            "Interactions",
-            "Book Store Application"
-            };
+            List<string> expectedMenus =
+            [
+                "Elements",
+                "Forms",
+                "Alerts, Frame & Windows",
+                "Widgets",
+                "Interactions",
+                "Book Store Application"
+            ];
             List<bool> allHomePageMenuVisibility = homePage.IsHomePageMenusVisible(expectedMenus);
             Assert.IsTrue(allHomePageMenuVisibility.TrueForAll(item => item), "All the expected menus are not present in the UI");
             log.Info("Verified that all expected menus are displayed in homepage");
