@@ -167,10 +167,10 @@ namespace Verification.Tests.UI_Test
             log.Info("Verification of Navigation to back");
             homePage.ClickOnTheHomePageMenu("Elements");
             elementsPage.ClickOnElementsPageSideMenu("Text Box");
-            var elementsPageUrl = WebDriver!.Url;
-            WebDriver.Navigate().Back();
-            WebDriver.WaitForPageLoad();
-            var homePageUrl = WebDriver.Url;
+            var elementsPageUrl = driver!.Url;
+            driver.Navigate().Back();
+            driver.WaitForPageLoad();
+            var homePageUrl = driver.Url;
             Assert.AreNotEqual(elementsPageUrl, homePageUrl);
             log.Info("Verification of Navigation to back completed");
         }

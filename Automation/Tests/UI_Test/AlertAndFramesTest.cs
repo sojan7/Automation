@@ -52,9 +52,9 @@ namespace Verification.Tests.UI_Test
             homePage.ClickOnTheHomePageMenu("Alerts, Frame & Windows");
             alertFrameAndWindowPage.ClickOnAlertPageSideMenu("Alerts");
             alertFrameAndWindowPage.ClickOnSimpleAlertButton();
-            var alertMessage = WebDriver!.GetAlertMessage();
+            var alertMessage = driver!.GetAlertMessage();
             Assert.AreEqual("You clicked a button", alertMessage, "Wrong alert message");
-            WebDriver!.AcceptAlert();
+            driver!.AcceptAlert();
             log.Info("Verification of simple alert completed");
         }
 
@@ -65,9 +65,9 @@ namespace Verification.Tests.UI_Test
             homePage.ClickOnTheHomePageMenu("Alerts, Frame & Windows");
             alertFrameAndWindowPage.ClickOnAlertPageSideMenu("Alerts");
             alertFrameAndWindowPage.ClickOnDelayedAlertButton();
-            var delayedalertMessage = WebDriver!.GetAlertMessage();
+            var delayedalertMessage = driver!.GetAlertMessage();
             Assert.AreEqual("This alert appeared after 5 seconds", delayedalertMessage, "Wrong alert message");
-            WebDriver!.AcceptAlert();
+            driver!.AcceptAlert();
             log.Info("Verification of delayed alert completed");
         }
 
@@ -78,9 +78,9 @@ namespace Verification.Tests.UI_Test
             homePage.ClickOnTheHomePageMenu("Alerts, Frame & Windows");
             alertFrameAndWindowPage.ClickOnAlertPageSideMenu("Alerts");
             alertFrameAndWindowPage.ClickOnAlertButtonWithConfirmButton();
-            var delayedalertMessage = WebDriver!.GetAlertMessage();
+            var delayedalertMessage = driver!.GetAlertMessage();
             Assert.AreEqual("Do you confirm action?", delayedalertMessage, "Wrong alert message");
-            WebDriver!.AcceptAlert();
+            driver!.AcceptAlert();
             var confirmAlertResultText = alertFrameAndWindowPage.GetConfirmAlertResultText();
             Assert.AreEqual("You selected Ok", confirmAlertResultText, "Error in accept alert functionality");
             log.Info("Verification of confirm button in alert confirmed");
