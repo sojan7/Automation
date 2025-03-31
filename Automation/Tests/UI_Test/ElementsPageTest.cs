@@ -9,13 +9,7 @@ using Verification.Tests.TestHelpers;
 
 namespace Verification.Tests.UI_Test
 {
-    /// <summary>
-    /// A parallelized sample test fixture
-    /// Current implementation will not help in parallel test run in 1 fixture.
-    /// Driver generation is done as part of constructor
-    /// </summary>
     [TestFixture]
-    [Parallelizable]
     internal class ElementsPageTest : BaseTest
     {
         private readonly UrlUtilities urlUtilities;

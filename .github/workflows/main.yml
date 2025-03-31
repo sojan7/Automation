@@ -1,6 +1,12 @@
 name: .NET Class Library Build
 
-on: push
+on:
+    push:
+        branches:
+            - master
+    pull_request:
+        branches:
+            - master    
 
 jobs:
   build-project:
@@ -21,3 +27,7 @@ jobs:
 
       - name: Build Class Library
         run: dotnet build --configuration Release --no-restore
+
+      - name: Run Unit Tests
+        run: dotnet test --configuration Release --no-build --verbosity normal --settings ./Runsettings/chrome.runsettings
+

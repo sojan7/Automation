@@ -9,7 +9,6 @@ using Verification.Tests.TestHelpers;
 namespace Verification.Tests.UI_Test
 {
     [TestFixture]
-    [Parallelizable]
     internal class AlertAndFramesTest : BaseTest
     {
         private readonly UrlUtilities urlUtilities;
