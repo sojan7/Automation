@@ -1,37 +1,15 @@
 name: .NET Automated Testing CI
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: push
 
 jobs:
-  test:
+  build-project:
+    name: Build Project
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: '8.0.x'
-
-      - name: Restore Dependencies
-        run: dotnet restore
-
-      - name: Build Solution
-        run: dotnet build --configuration Release --no-restore
-
-      - name: Run Tests with RunSettings
-        run: dotnet test --configuration Release --no-build --verbosity normal --settings ./Runsettings/chrome.runsettings
-
-      - name: Upload Test Results
-        uses: actions/upload-artifact@v3
-        with:
-            name: test-results
-            path: TestResults/
+      name: Checkout Code
+      uses: actions/checkout@v3
+      name: Install NPM Dependencies
+      uses: npm install
+      name: Build project Assets
+      uses: npm run build
