@@ -1,4 +1,4 @@
-name: .NET Automated Testing CI
+name: .NET Class Library Build
 
 on: push
 
@@ -6,10 +6,18 @@ jobs:
   build-project:
     name: Build Project
     runs-on: ubuntu-latest
+
     steps:
-      name: Checkout Code
-      uses: actions/checkout@v3
-      name: Install NPM Dependencies
-      uses: npm install
-      name: Build project Assets
-      uses: npm run build
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Build Class Library
+        run: dotnet build --configuration Release --no-restore
